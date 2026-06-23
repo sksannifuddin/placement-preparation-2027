@@ -1,4 +1,3 @@
-# placement-preparation-2027
 # Placement Preparation 2027
 
 This repository contains my complete placement preparation journey for 2027.
