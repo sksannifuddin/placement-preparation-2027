@@ -239,13 +239,15 @@ print(text.center(20,"*"))
 # Create:
 # text = "Python"
 # Left align it in width 15.
+text = "Python"
+print(text.ljust(15))
 
 # Q4
 # Create:
 # text = "Python"
 # Right align it in width 15.
 text = "Python"
-print(text.ljust(15))
+print(text.rjust(15))
 
 # Q5
 # Create:
@@ -275,7 +277,7 @@ print("My name is {} and I am {} years old".format("sunny","20"))
 # Q9
 # Use format() to print:
 # Product: Laptop, Price: 50000
-print("product: {}, Price: {}".format("Laptop", {50000}))
+print("product: {}, Price: {}".format("Laptop", 50000))
 # Q10
 # Use format_map() with dictionary:
 # {"name":"Sunny", "age":20}
@@ -296,12 +298,12 @@ print(text.center(10, "*"))
 # Q13
 text = "Python"
 print(text.ljust(10, "-"))
-# Predict Output:- --Python
+# Predict Output:-Python----
 
 # Q14
 text = "Python"
 print(text.rjust(10, "-"))
-# Predict Output:Python--
+# Predict Output:----Python
 
 # Q15
 text = "42"
@@ -361,7 +363,7 @@ print("{:<10}".format("AI"))
 # Take a number as string.
 # Add leading zeros until width becomes 6.
 num="1234"
-print(num.zfill(2))
+print(num.zfill(6))
 # Q27
 # Take name and age.
 # Print using format().
@@ -402,6 +404,19 @@ print("my name is {name} , my branch is {branch} and my college name is {college
 # Quantity centered
 # Price right aligned
 # Total bill at the end
+product="Laptop"
+quantity="1"
+price="100000"
+bill=int(quantity)*int(price)
+print(product.ljust(10))
+print(quantity.center(10))
+print(price.rjust(10))
+print(bill)
+
+
+
+
+
 # ============================================
 # STRING METHODS - MODULE 6
 # ADVANCED STRING METHODS
@@ -409,142 +424,159 @@ print("my name is {name} , my branch is {branch} and my college name is {college
 # encode(), maketrans(), translate()
 # ============================================
 
+
+
 # PART-1 : Coding Questions
 
 # Q1
 # Create:
 # text = "Python is easy"
 # Use partition("is").
-
+text = "Python is easy"
+print(text.partition("is"))
 # Q2
 # Create:
 # text = "Python is easy and Python is powerful"
 # Use partition("Python").
-
+text = "Python is easy and Python is powerful"
+print(text.partition("Python"))
 # Q3
 # Create:
 # text = "Python is easy and Python is powerful"
 # Use rpartition("Python").
-
+text = "Python is easy and Python is powerful"
+print(text.rpartition("Python"))
 # Q4
 # Create:
 # text = "Python Programming"
 # Use partition("Java").
-
+text = "Python Programming"
+print(text.partition("Java"))
 # Q5
 # Create:
 # text = "Straße"
 # Convert it using casefold().
-
+text = "Straße"
+print(text.casefold())
 # Q6
 # Create:
 # text = "PYTHON"
 # Convert it using casefold().
-
+text = "PYTHON"
+print(text.casefold())
 # Q7
 # Create:
 # text = "Python"
 # Encode it using default encoding.
-
+text = "Python"
+print(text.encode())
 # Q8
 # Create:
 # text = "Python"
 # Create translation table to replace P with J.
 # Use maketrans() and translate().
-
+table=str.maketrans("P","J")
+text = "Python"
+print(text.translate(table))
 # Q9
 # Create:
 # text = "hello world"
 # Replace h with H and w with W using translate().
-
+table=str.maketrans("hw","HW")
+text = "hello world"
+print(text.translate(table))
 # Q10
 # Create:
 # text = "banana"
 # Replace a with @ using translate().
+table=str.maketrans("a","@")
+text = "banana"
+print(text.translate(table))
 
-# PART-2 : Output Prediction
+
 
 # Q11
 text = "Python is easy"
 print(text.partition("is"))
-# Predict Output
+# Predict Output:- ('Python ','is',' easy' )
 
 # Q12
+
 text = "Python is easy"
 print(text.partition("Java"))
-# Predict Output
+# Predict Output:- ('Python is easy', '', '')
 
 # Q13
 text = "Python is easy and Python is powerful"
 print(text.rpartition("Python"))
-# Predict Output
+# Predict Output:- ('Python is easy and ','Python',' is powerful')
 
 # Q14
 text = "PYTHON"
 print(text.casefold())
-# Predict Output
+# Predict Output:-  python
 
 # Q15
 text = "Straße"
 print(text.casefold())
-# Predict Output
+# Predict Output:- strasse
 
 # Q16
 text = "Python"
 print(text.encode())
-# Predict Output
+# Predict Output:b 'Python'
 
 # Q17
 table = str.maketrans("P", "J")
 text = "Python"
 print(text.translate(table))
-# Predict Output
+# Predict Output:-Jython
 
 # Q18
 table = str.maketrans("aeiou", "12345")
 text = "education"
 print(text.translate(table))
-# Predict Output
+# Predict Output:-2d5c1t34n
 
 # Q19
 text = "Python"
 print(text.partition("t"))
-# Predict Output
+# Predict Output:-('Py', 't' , 'hon')
 
 # Q20
 text = "Python Python"
 print(text.rpartition("Python"))
-# Predict Output
+# Predict Output:-('Python ', 'Python', '')
 
 # PART-3 : FAANG Tricky Questions
 
 # Q21
 text = "Python"
 print(text.partition("z"))
-# Predict Output
+# Predict Output:- ('Python', '', '')
 
 # Q22
 text = "Python"
 print(text.rpartition("z"))
-# Predict Output
+# Predict Output:- ('', '', 'Python')
 
 # Q23
 text = "HELLO"
 print(text.lower())
 print(text.casefold())
-# Predict Output
+# Predict Output:- hello,hello
 
 # Q24
 table = str.maketrans("abc", "123")
 text = "abc cab"
 print(text.translate(table))
-# Predict Output
+# Predict Output:- 123 312
 
 # Q25
 table = str.maketrans("", "", "aeiou")
 text = "education"
 print(text.translate(table))
-# Predict Output
+# Predict Output:- dctn
 
 # PART-4 : Placement Coding Questions
 
@@ -552,24 +584,35 @@ print(text.translate(table))
 # Take an email:
 # username@gmail.com
 # Use partition("@") to separate username and domain.
+name="sannifuddin@gmail.com"
+print(name.partition("@"))
 
 # Q27
 # Take a full name.
 # Use partition(" ") to separate first name and remaining name.
+name="shaik sannifuddin"
+print(name.partition(" "))
 
 # Q28
 # Take a sentence.
 # Use rpartition(" ") to separate the last word.
-
+sentence="sunny is good boy"
+print(sentence.rpartition(" "))
 # Q29
 # Take a sentence.
 # Convert it using casefold().
 # Check whether it equals another sentence ignoring case.
+sentence="sunny is good boy"
+sentence1="Sunny is  good boy"
+print(sentence1.casefold())
+print(sentence==sentence1.casefold())
 
 # Q30
 # Take a sentence.
 # Remove all vowels using maketrans() and translate().
-
+table = str.maketrans("", "", "aeiou")
+sentence="sunny is good boy"
+print(sentence.translate(table))
 # GOOGLE / AMAZON CHALLENGE
 
 # Q31
@@ -581,3 +624,11 @@ print(text.translate(table))
 # 4. rpartition the sentence at last space
 # 5. Encode the final sentence
 # Print all results.
+sentence="sunny is good boy"
+print(sentence.casefold())
+table = str.maketrans("", "", "aeiou")
+final=sentence.translate(table)
+print(final)
+print(sentence.partition("sunny"))
+print(sentence.rpartition("boy"))
+print(final.encode())
