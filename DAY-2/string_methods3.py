@@ -1,5 +1,5 @@
 # ============================================
-# STRING METHODS - MODULE 4
+# STRING METHODS - MODULE 3
 # VALIDATION METHODS
 # isalpha(), isdigit(), isalnum(), isspace(),
 # islower(), isupper(), istitle(), isascii(),
@@ -213,7 +213,7 @@ else:
 
 
 # ============================================
-# STRING METHODS - MODULE 5
+# STRING METHODS - MODULE 4
 # FORMATTING METHODS
 # center(), ljust(), rjust(), zfill(),
 # expandtabs(), format(), format_map()
@@ -418,7 +418,7 @@ print(bill)
 
 
 # ============================================
-# STRING METHODS - MODULE 6
+# STRING METHODS - MODULE 5
 # ADVANCED STRING METHODS
 # partition(), rpartition(), casefold(),
 # encode(), maketrans(), translate()
@@ -603,7 +603,7 @@ print(sentence.rpartition(" "))
 # Convert it using casefold().
 # Check whether it equals another sentence ignoring case.
 sentence="sunny is good boy"
-sentence1="Sunny is  good boy"
+sentence1="Sunny is Good Boy"
 print(sentence1.casefold())
 print(sentence==sentence1.casefold())
 
@@ -629,6 +629,6 @@ print(sentence.casefold())
 table = str.maketrans("", "", "aeiou")
 final=sentence.translate(table)
 print(final)
-print(sentence.partition("sunny"))
-print(sentence.rpartition("boy"))
+print(sentence.partition(" "))
+print(sentence.rpartition(" "))
 print(final.encode())
