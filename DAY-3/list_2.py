@@ -1,234 +1,232 @@
 # ============================================
-# LISTS - MODULE 1
-# (Introduction, Creation, Basic Properties)
+# LISTS - MODULE 2
+# (Indexing & Slicing)
 # ============================================
 # PART-1 : Coding Questions
 # Q1
-# Create an empty list named numbers.
-numbers=[]
-numbers=list()
-# Q2
+# Create a list:
+# numbers = [10,20,30,40,50]
+# Print the first element.
+numbers = [10,20,30,40,50]
+print(numbers[0])
 
-# Create a list containing:
-# 10, 20, 30, 40, 50
-# Print the list.
-num=[10,20,30,40,50]
-print(num)
+# Q2
+# Print the last element.
+numbers = [10,20,30,40,50]
+print(numbers[-1])
 
 # Q3
-# Create a list of five fruits.
-# Print the list.
-fruits=["mango","kiwi","banana","watermelon","orange"]
-print(fruits)
+# Print the third element.
+numbers = [10,20,30,40,50]
+print(numbers[2])
 
 # Q4
-# Create a list containing:
-# 10
-# 3.14
-# "Python"
-# True
-# Print the list.
-data=[10,3.14,"Python",True]
-print(data)
+# Print the second last element.
+numbers = [10,20,30,40,50]
+print(numbers[-2])
 
 # Q5
-# Create a nested list containing:
-# [1,2,3]
-# [4,5,6]
-# [7,8,9]
-# Print the complete list.
-nested_list=[[1,2,3],[4,5,6],[7,8,9]]
-print(nested_list)
+# Create
+# fruits = ["Apple","Banana","Mango","Orange","Kiwi"]
+# Print "Mango".
+fruits = ["Apple","Banana","Mango","Orange","Kiwi"]
+print(fruits[2])
 
 # Q6
-# Create a list of your favourite movies.
-# Print the list.
-movies=["f1","bahubali","avengers","avatar"]
-print(movies)
+# Create
+# colors = ["Red","Green","Blue","Black","White"]
+# Print "White" using negative indexing.
+colors = ["Red","Green","Blue","Black","White"]
+print(colors[-1])
 
 # Q7
-# Create a list of your family members' names.
-# Print the list.
-family=["shameem","sunny","masthanbasha","soniya"]
-print(family)
+# Print the first three elements.
+colors = ["Red","Green","Blue","Black","White"]
+print(colors[0:3])
 
 # Q8
-#  Create a list of five floating-point numbers.
-# Print the list.
-floating=[3.14,7.5,6.7,8.5,6.8]
-print(floating)
+# Print the last three elements.
+colors = ["Red","Green","Blue","Black","White"]
+print(colors[-3:])
 
 # Q9
-# Create a list of five Boolean values.
-# Print the list.
-boolean=[True,True,False,False,True]
-print(boolean)
+# Print every element except the first one.
+colors = ["Red","Green","Blue","Black","White"]
+print(colors[1:])
 
 # Q10
-# Create an empty list.
-# Add no elements.
-# Print the list.
-list=[]
-print(list)
+# Print every element except the last one.
+colors = ["Red","Green","Blue","Black","White"]
+print(colors[0:-1])
+
 
 # ============================================
 # PART-2 : OUTPUT PREDICTION
 # ============================================
 # Q11
-# a = [10,20,30]
-# print(a)
+# a = [10,20,30,40]
+# print(a[0])
 
-# Predict Output.:- [10,20,30]
+# Predict Output.:- 10
 
 # Q12
-# a = []
-# print(a)
+# a = [10,20,30,40]
+# print(a[-1])
 
-# Predict Output.:- []
+# Predict Output.:- 40
 
 # Q13
-# a = [1,2,3]
+# a = [5,10,15,20,25]
+# print(a[2])
 
-# print(len(a))
-
-# Predict Output.:- 3
+# Predict Output.:- 15
 
 # Q14
-# a = [10]
-# print(type(a))
-# Predict Output.:-<class 'list'>
+# a = ["A","B","C","D"]
+# print(a[-2])
+
+# Predict Output.:- C
 
 # Q15
-# a = ["Python",100,True]
-# print(a)
-# Predict Output.:- ['Python',100,True]
+# a = [1,2,3,4,5]
+# print(a[1:4])
+
+# Predict Output.:- [2,3,4]
 
 # Q16
-# a = [[1,2],[3,4]]
-# print(a)
-# Predict Output.:- [[1,2],[3,4]]
+# a = [1,2,3,4,5]
+# print(a[:3])
 
-# Q17
-# a = [10,20,30]
-# print(type(a))
-# Predict Output.:- <class 'list'>
-
-# Q18
-# a = [1,2,3]
-# b = a
-# print(b)
 # Predict Output.:- [1,2,3]
 
+# Q17
+# a = [1,2,3,4,5]
+# print(a[2:])
+
+# Predict Output.:- [3,4,5]
+
+# Q18
+# a = [10,20,30,40,50]
+# print(a[::-1])
+
+# Predict Output.:- [50,40,30,20,10]
+
 # Q19
-# a = [10,20]
-# print(len(a))
-# Predict Output.:- 2
+# a = [10,20,30,40,50]
+# print(a[::2])
+
+# Predict Output.:-[10,30,50]
 
 # Q20
-# a = [10,20,30]
-# print(a,a)
-# Predict Output.:- [10,20,30] [10,20,30]
+# a = [10,20,30,40,50]
+# print(a[1::2])
+
+# Predict Output.:- [20,40]
 
 # ============================================
 # PART-3 : FAANG TRICKY QUESTIONS
 # ============================================
-
 # Q21
-# a = [10]
-# print(type(a))
-# Predict Output.:-<class 'list'>
+# a = [10,20,30,40,50]
+# print(a[-5])
+
+# Predict Output.:-10
 
 # Q22
-# a = list()
-# print(a)
-# Predict Output.:- []
+# a = [10,20,30,40,50]
+# print(a[len(a)-1])
+
+# Predict Output.:- 50
 
 # Q23
-# a = list("Python")
-# print(a)
-# Predict Output.:- ['P','y','t','h','o','n']
+# a = [1,2,3,4,5]
+# print(a[3:3])
+
+# Predict Output.:- []
 
 # Q24
-# a = list((10,20,30))
-# print(a)
-# Predict Output.:-[10,20,30]
+# a = [1,2,3,4,5]
+# print(a[-4:-1])
+
+# Predict Output.:- [2,3,4]
 
 # Q25
-# a = [1,2,3]
-# print(bool(a))
-# Predict Output.:-True
+# a = [1,2,3,4,5]
+# print(a[4:1:-1])
+
+# Predict Output.:-5,4,3
 
 # ============================================
 # PART-4 : PLACEMENT QUESTIONS
 # ============================================
 # Q26
 
-# Create a list of your favourite programming languages.
-
+# Take a list.
 # Print:
-
-# The list
-# Its type
-# Its length
-programs=["python","c","java","javascript"]
-print(programs)
-print(type(programs))
-print(len(programs))
+# First element
+# Last element
+s=[1,2,3,4]
+print(s[0])
+print(s[-1])
 
 # Q27
-# Create a list containing:
-# Integer
-# Float
-# String
-# Boolean
-# List
-# Print the list.
-l=[3,3.14,"sunny",True,[1,2]]
-print(l)
+# Take a list.
+# Print the middle element.
+# (Hint: len())
+s=[1,2,3,4]
+print(s[len(s)//2])
+
 
 # Q28
-# Create two different lists.
-# Print both lists together.
-s=[1,2,3,"sunny"]
-b=[4,5,6,"soniya"]
-print(s,b)
-print(s+b)
-
+# Take a list.
+# Print:
+# Second element
+# Second last element
+s=[1,2,3,4]
+print(s[1])
+print(s[-2])
 
 # Q29
 
-# Create a nested list representing:
-
-# Class A
-# Class B
-# Class C
-nes_list=[["ClassA",["sunny","raffi","mahesh"]],["ClassB",["sunny","raffi","mahesh"]],["ClassC",["sunny","raffi","mahesh"]]]
-print(nes_list)
-# Each class should contain three student names.
-
-# Print the nested list.
+# Take a list.
+# Print every alternate element using slicing.
+s=[1,2,3,4,5,6,7,8]
+print(s[::2])
 
 # Q30
-# Create a list containing:
-# Name
-# Age
-# College
-# CGPA
-# Print the list.
-details=["sunny",20,"N.B.K.R",7.5]
-print(details)
+
+# Take a list of 10 numbers.
+# Print:
+# First five numbers
+# Last five numbers
+s=[1,2,3,4,5,6,7,8,9,10]
+print(s[0:5])
+print(s[-5:])
 
 # ============================================
 # 🚀 GOOGLE / AMAZON CHALLENGE
 # ============================================
 # Q31
-# Create a nested list representing a student database.
-# Each student should have:
-# Name
-# Age
-# Department
-# CGPA
-# Store information for 5 students.
-# Finally print the entire database.
-student=[["Name",["sunny","raffi","mahesh","govardhan","suresh"]],["Age",[20,19,21,21,19]],["Department",["AIDS","PharmD","bussiness","AIDS","pharmD"]],["CGPA",[9,7.9,8,9.5,9]]]
-print(student)
+
+# Create a list containing 20 integers.
+# Using slicing only, print:
+# First 5 elements
+# Last 5 elements
+# Middle 6 elements
+# Every alternate element
+# Reverse the list
+# List without the first and last element
+# Every third element
+# Reverse every alternate element
+
+
+s=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+print(s[0:5])
+print(s[-5:])
+mid=len(s)//2
+print(s[mid-3:mid+3])
+print(s[::2])
+print(s[::-1])
+print(s[1:-1])
+print(s[::3])
+print(s[::-2])
