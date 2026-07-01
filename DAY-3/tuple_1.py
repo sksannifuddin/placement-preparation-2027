@@ -274,73 +274,129 @@ print(smallest)
 # 20
 # 30
 # PART-3 : FAANG / Placement Questions
-# Q36
 
+# Q36
 # Without using len(), count the number of elements in a tuple.
+s=(10,20,30,40,50,60)
+count=0
+for i in s:
+    count+=1
+print(count)
+    
 
 # Q37
-
 # Without using max(), find the largest element.
+n=(10,20,30,40)
+largest=n[0]
+for i in n:
+    if i>largest:
+        largest=i
+print(largest)
+
 
 # Q38
-
 # Without using min(), find the smallest element.
+n=(10,20,30,40)
+smallest=n[0]
+for i in n:
+    if i<smallest:
+        smallest=i
+print(smallest)
+
 
 # Q39
-
 # Without using count(), find the frequency of 20.
+n=(10,20,30,40,20,20,20,20)
+freq=0
+for i in n:
+    if i == 20:
+        freq+=1
+print(freq)
+
 
 # Q40
-
 # Without using the in operator, search whether 50 exists in a tuple.
-
+n=(10,20,30,40,50,50,50)
+for i in n:
+    if i == 50:
+        print("Exists")
+        break
+else:
+    print("Not Exists")
+        
 # Q41
-
 # Traverse the tuple in reverse order using indexing (not slicing).
+n=(10,20,30,40,50,50,50)
+for i in range(len(n)-1,-1,-1):
+    print(n[i])
 
 # Q42
-
 # Print only elements present at even indexes.
+n=(10,20,30,40,50,50,50)
+for i in range(0,len(n),2):
+    print(n[i])
+    
+for i,val in enumerate(n):
+    if i%2==0:
+        print(val)
+        
+n = (10,20,30,40,50,60)
+i = 0
+while i < len(n):
+    print(n[i])
+    i += 2
+    
 
 # Q43
 
 # Print only elements present at odd indexes.
-
+n=(10,20,30,40,50,50,50)
+for i in range(1,len(n),2):
+    print(n[i])
+    
+for i,val in enumerate(n):
+    if i%2!=0:
+        print(val)
+    
+i=1
+while i < len(n):
+    print(n[i])
+    i+=2
+    
+    
 # Q44
 
 # Unpack
-
 # student=("Sunny",21,"AIDS")
 
 # into three variables and print them separately.
+student=("Sunny",21,"AIDS")
+name,age,branch=student
+print(name)
+print(age)
+print(branch)
+
 
 # Q45
-
 # Create a tuple inside another tuple and print only the second inner tuple.
-
 # Example:
-
 # ((10,20),(30,40),(50,60))
-
 # Output:
-
 # (30,40)
+n=((10,20),(30,40),(50,60))
+print(n[1])
+
+
 # PART-4 : Google / Amazon Challenge
 # Q46
-
 # Given
-
 # numbers=(10,20,30,40,50,60,70,80,90,100)
-
 # Without using:
-
 # sum()
 # max()
 # min()
 # count()
-
 # Find in one program:
-
 # Total
 # Average
 # Largest
@@ -352,4 +408,36 @@ print(smallest)
 # Print index and value together
 # Number of iterations
 
-# These 46 questions cover every core concept of Tuple Module 1 without unnecessary repetition. Once you finish them, Module 2 will move into tuple operations, built-in functions, comparisons, zip(), conversions, immutability, and interview tricks.
+nnumbers=(10,20,30,40,50,60,70,80,90,100)
+total=0
+largest=numbers[0]
+smallest=numbers[0]
+even_count=0
+odd_count=0
+for i in numbers:
+    total+=i
+    if i>largest:
+        largest=i
+    elif i<smallest:
+        smallest=i
+    if i%2==0:
+        even_count+=1
+    else:
+        odd_count+=1
+average=total/len(numbers)
+print(total)
+print(average)
+print(largest)
+print(smallest)
+print(even_count)
+print(odd_count)
+if 70 in numbers:
+    print("70 exists")
+else:
+    print("not exists")
+for i in range(len(numbers)-1,-1,-1):
+    print(numbers[i])
+for i,v in enumerate(numbers):
+    print(i,v)
+for i in numbers:
+    print(i)
